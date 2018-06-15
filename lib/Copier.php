@@ -18,4 +18,14 @@ class Copier
         $pwd = exec("pwd");
         return explode('/',$pwd)[2];
     }
+
+    /**
+     * Create dir and copy the file
+     * @param $id student id
+     * @param $proj project name
+     */
+    public function copyFile($id,$proj){
+        $dirCmd = "mkdir -p ./477copy/$id/$proj";
+        $command = "\cp -rf  ~$id/classweb/$proj/* ./477copy/$id/$proj";
+    }
 }

@@ -11,5 +11,8 @@ namespace Copier;
 
 class CopierController
 {
-
+    public function __construct($post)
+    {
+        var_dump($post);
+    }
 }
